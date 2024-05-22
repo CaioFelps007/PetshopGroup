@@ -2,35 +2,26 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 
 
-// chamando as paginas
+// chamando as paginas 
 import PageInicial from "../pages/Inicio";
 import Loggedin from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import Home from "../pages/Home";
 
 
-export default function StackRoutes() {
+export default function StackRoutesDois() {
 
     const Stack = createNativeStackNavigator();
 
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
 
-            <Stack.Screen
-                name="Inicio"
-                component={PageInicial}
-            />
+
 
             <Stack.Screen
-                name="Cadastro"
-                component={Cadastro}
+                name="Home"
+                component={Home}
             />
-
-            <Stack.Screen
-                name="Login"
-                component={Loggedin}
-            />
-
 
 
 

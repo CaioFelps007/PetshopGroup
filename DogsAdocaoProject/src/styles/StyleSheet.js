@@ -8,6 +8,13 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
+  containerDois: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "flex-start",
+  },
+
   // TELA INICIAL
   boasVindas: {
     width: "100%",
@@ -34,19 +41,18 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 60,
-    marginBottom: 20,
+    marginBottom: 30,
     borderRadius: 200,
   },
 
   imagemInicial: {
-    width: 290,
-    height: 350,
+    width: 220,
+    height: 420,
     shadowOffset: { width: 0, height: 5 },
     shadowColor: "blue",
     shadowRadius: 10,
     shadowOpacity: 0.5,
     elevation: 5,
-    borderRadius: 200,
   },
 
   ButtonsInicial: {
@@ -78,4 +84,119 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 17,
   },
+
+  //cadastro
+  formularioCadastro: {
+    width: 350,
+    height: 420,
+    backgroundColor: 'white',
+    marginBottom: 100,
+    borderRadius: 35,
+    padding: 20,
+    shadowOffset: { width: 0, height: 5 },
+    shadowColor: "black",
+    shadowRadius: 10,
+    shadowOpacity: 0.5,
+    elevation: 5,
+    marginTop: 10,
+  },
+
+
+  fundoCadastro: {
+    width: '100%',
+    height: 870,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    backgroundColor: 'white',
+    paddingTop: 90,
+  },
+
+
+
+
+  //LOGIN
+
+  fundoLogin: {
+    width: '100%',
+    height: 870,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    backgroundColor: 'white',
+    paddingTop: 70,
+  },
+
+
+  formularioLogin: {
+    width: 350,
+    height: 350,
+    backgroundColor: 'white',
+    borderRadius: 35,
+    padding: 20,
+    shadowOffset: { width: 0, height: 5 },
+    shadowColor: "black",
+    shadowRadius: 10,
+    shadowOpacity: 0.5,
+    elevation: 5,
+  },
+
+  caixatextoLogin: {
+    borderBottomColor: '#17395C',
+    borderBottomWidth: 2,
+    margin: 10,
+    height: 55,
+  },
+
+  ButtonLogin: {
+    backgroundColor: '#17395C',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 45,
+    width: 150,
+    borderRadius: 10,
+    shadowOffset: { width: 0, height: 5 },
+    shadowColor: "black",
+    shadowRadius: 10,
+    shadowOpacity: 0.5,
+    elevation: 5,
+  },
+
+  ButtonVoltar: {
+    width: 30, height: 40, marginLeft: 30,
+    borderRadius: 20,
+    shadowOffset: { width: 0, height: 5 },
+    shadowColor: "black",
+    shadowRadius: 5,
+    shadowOpacity: 0.5,
+    elevation: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white'
+  },
+
+  // ESTILO HOME
+
+  // ESTILO CARROSSEL
+  containerCarousel: {
+    marginTop: 10,
+    shadowColor: '#000',
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 5 },
+    elevation: 5,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    width: 400,
+    height: 260,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 20,
+  },
+
+  img: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 20,
+
+  },
+
 });

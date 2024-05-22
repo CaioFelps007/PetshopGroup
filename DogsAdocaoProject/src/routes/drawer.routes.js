@@ -4,7 +4,13 @@ import { Feather } from "@expo/vector-icons";
 
 // chamando as paginas
 import PageInicial from "../pages/Inicio";
-
+import Loggedin from "../pages/Login";
+import Cadastro from "../pages/Cadastro";
+import StackRoutes from "./stack.routes";
+import Home from "../pages/Home";
+import StackRoutesDois from "./stackDois.routes";
+import Sobre from "../pages/Sobre";
+import Contato from "../pages/Contato";
 
 
 export default function DrawerRoutes() {
@@ -23,20 +29,55 @@ export default function DrawerRoutes() {
 
             }}>
 
+            <Drawer.Screen
+                name="Inicio"
+                component={StackRoutes}
+                options={{
+                    drawerIcon: ({ color, size }) => (
+                        <Feather name="user" color={color} size={size} />
+                    ),
+                    drawerLabel: "Login e Cadastro",
+                    headerShown: false
+                }}
+            />
+
 
             <Drawer.Screen
 
-                name="Inicio"
-                component={PageInicial}
+                name="Home"
+                component={StackRoutesDois}
                 options={{
                     drawerIcon: ({ color, size }) => (
                         <Feather name="home" color={color} size={size} />
                     ),
-                    drawerLabel: "Inicio",
-
-
+                    headerShown: true
                 }}
             />
+
+            <Drawer.Screen
+                name="Sobre"
+                component={Sobre}
+                options={{
+                    drawerIcon: ({ color, size }) => (
+                        <Feather name="info" color={color} size={size} />
+                    ),
+                    drawerLabel: "Sobre",
+                }}
+            />
+
+            <Drawer.Screen
+                name="Contato"
+                component={Contato}
+                options={{
+                    drawerIcon: ({ color, size }) => (
+                        <Feather name="smartphone" color={color} size={size} />
+                    ),
+                    drawerLabel: "Contato",
+                }}
+            />
+
+
+
 
 
 

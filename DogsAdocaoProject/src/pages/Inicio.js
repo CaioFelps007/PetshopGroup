@@ -3,9 +3,16 @@ import { Text, SafeAreaView, View, Image } from "react-native";
 import Botao from "../components/ButtonComponents";
 import Textos from "../components/TextComponents";
 
+import { useNavigation } from "@react-navigation/native";
+
 import { useFonts } from "expo-font";
 
+
+
 export default function PageInicial() {
+
+  const navigation = useNavigation();
+
   const [fontsLoaded] = useFonts({
     TitanOne: require("../assets/fonts/TitanOne-Regular.ttf"),
   });
@@ -33,7 +40,7 @@ export default function PageInicial() {
 
       <View style={styles.ViewImage}>
         <Image
-          source={require("../assets/images/dobermanInicio.png")}
+          source={require("../assets/images/jake.png")}
           style={styles.imagemInicial}
         />
       </View>
@@ -43,6 +50,7 @@ export default function PageInicial() {
           TxtBtn={"Entrar"}
           estilos={styles.buttonInicial}
           txtestilos={styles.conteudobotao}
+          onpresstxt={() => navigation.navigate("Login")}
         />
         <Botao
           TxtBtn={"Cadastro"}
@@ -58,6 +66,7 @@ export default function PageInicial() {
             },
           ]}
           txtestilos={[styles.conteudobotao, { color: "black" }]}
+          onpresstxt={() => navigation.navigate("Cadastro")}
         />
       </View>
     </SafeAreaView>
