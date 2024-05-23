@@ -89,7 +89,7 @@ export const styles = StyleSheet.create({
   formularioCadastro: {
     width: 350,
     height: 420,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     marginBottom: 100,
     borderRadius: 35,
     padding: 20,
@@ -101,35 +101,30 @@ export const styles = StyleSheet.create({
     marginTop: 10,
   },
 
-
   fundoCadastro: {
-    width: '100%',
+    width: "100%",
     height: 870,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    backgroundColor: 'white',
+    alignItems: "center",
+    justifyContent: "flex-start",
+    backgroundColor: "white",
     paddingTop: 90,
   },
-
-
-
 
   //LOGIN
 
   fundoLogin: {
-    width: '100%',
+    width: "100%",
     height: 870,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    backgroundColor: 'white',
+    alignItems: "center",
+    justifyContent: "flex-start",
+    backgroundColor: "white",
     paddingTop: 70,
   },
-
 
   formularioLogin: {
     width: 350,
     height: 350,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 35,
     padding: 20,
     shadowOffset: { width: 0, height: 5 },
@@ -140,16 +135,16 @@ export const styles = StyleSheet.create({
   },
 
   caixatextoLogin: {
-    borderBottomColor: '#17395C',
+    borderBottomColor: "#17395C",
     borderBottomWidth: 2,
     margin: 10,
     height: 55,
   },
 
   ButtonLogin: {
-    backgroundColor: '#17395C',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#17395C",
+    alignItems: "center",
+    justifyContent: "center",
     height: 45,
     width: 150,
     borderRadius: 10,
@@ -161,42 +156,68 @@ export const styles = StyleSheet.create({
   },
 
   ButtonVoltar: {
-    width: 30, height: 40, marginLeft: 30,
+    width: 30,
+    height: 40,
+    marginLeft: 30,
     borderRadius: 20,
     shadowOffset: { width: 0, height: 5 },
     shadowColor: "black",
     shadowRadius: 5,
     shadowOpacity: 0.5,
     elevation: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white'
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "white",
   },
 
   // ESTILO HOME
+  paginaHome: {
+    height: 500,
+    width: "100%",
+    padding: 10,
+    alignItems: "center",
+  },
 
-  // ESTILO CARROSSEL
-  containerCarousel: {
-    marginTop: 10,
-    shadowColor: '#000',
+  TextoHome: {
+    fontSize: 24,
+    color: "black",
+    textAlign: "center",
+  },
+
+  btnHome: {
+    height: 50,
+    width: 170,
+    borderRadius: 15,
+    backgroundColor: "#EFB758",
+    shadowColor: "#000",
     shadowOpacity: 0.5,
     shadowRadius: 10,
     shadowOffset: { width: 0, height: 5 },
     elevation: 5,
-    backgroundColor: 'white',
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  // ESTILO CARROSSEL
+  containerCarousel: {
+    marginTop: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 5 },
+    elevation: 5,
+    backgroundColor: "white",
     borderRadius: 20,
     width: 400,
     height: 260,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     marginBottom: 20,
   },
 
   img: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     borderRadius: 20,
-
   },
-
 });
