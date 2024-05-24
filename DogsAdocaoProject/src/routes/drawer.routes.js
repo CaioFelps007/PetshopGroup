@@ -59,6 +59,21 @@ export default function DrawerRoutes() {
           headerShown: true,
         }}
       />
+
+      <Drawer.Screen
+        name="Sobre"
+        component={Sobre}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Feather name="home" color={color} size={size} />
+          ),
+          headerShown: true,
+        }}
+      />
+
+
     </Drawer.Navigator>
+
+
   );
 }

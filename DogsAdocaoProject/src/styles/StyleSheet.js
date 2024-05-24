@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
   containerDois: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
     justifyContent: "flex-start",
   },
 
@@ -172,52 +171,41 @@ export const styles = StyleSheet.create({
 
   // ESTILO HOME
   paginaHome: {
-    height: 300,
+    height: 1000,
     width: "100%",
-    padding: 10,
     alignItems: "center",
+
   },
 
-  TextoHome: {
-    fontSize: 24,
-    color: "black",
-    textAlign: "center",
-  },
-
-  ButtonDescer: {
-    borderRadius: 20,
-    height: 45,
-    width: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: "#17395C",
-    shadowOffset: { width: 0, height: 5 },
-    shadowColor: "black",
-    shadowRadius: 5,
-    shadowOpacity: 0.5,
-    elevation: 5,
-  },
-
-
-  btnHome: {
-    height: 50,
-    width: 170,
-    borderRadius: 15,
-    backgroundColor: "#EFB758",
-    shadowColor: "#000",
-    shadowOpacity: 0.5,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 5 },
-    elevation: 5,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
-  rolagemPets: {
+  HeaderUser: {
     width: '100%',
-    height: 300,
-    backgroundColor: 'black'
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    height: 160,
+    padding: 15
   },
+
+  hduser: {
+    fontSize: 17,
+  },
+
+  bodyHome: {
+
+  },
+
+  flatListContent: {
+    justifyContent: "center",
+    flexGrow: 1,
+    alignItems: "center",
+  },
+
+  iconContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+
 
   //sobre
   Image: {
@@ -256,15 +244,38 @@ export const styles = StyleSheet.create({
     marginTop: 130
   },
   textos: {
-    marginTop: 150,
+    marginTop: 90,
     width: 300,
     justifyContent: "flex-start",
     textAlign: "justify",
     textAlign: "center"
   },
+  botao: {
+    backgroundColor: "#c24229",
+    width: 100,
+    borderRadius: 5,
+    height: 25,
+    marginTop: 10
+  },
+  btnModal: {
+    backgroundColor: "#c24229",
+    width: 120,
+    borderRadius: 5,
+    height: 30,
+    marginTop: 15
+  },
+  modal: {
+    borderColor: "#e1dcc9",
+    borderRadius: 20,
+    backgroundColor: "#e1dcc9",
+    width: 410,
+    height: 1000,
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
 
   //produtos 
-  produtos: {
+  produtosTxt: {
     marginTop: 150,
     width: 300,
     justifyContent: "flex-start",

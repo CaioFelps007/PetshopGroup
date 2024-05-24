@@ -7,6 +7,12 @@ import { useNavigation } from "@react-navigation/native";
 
 
 export default function Produtos() {
+    const produtos = [
+        { id: "1", urlImg: require("../assets/images/cachorroToys.png"), nameDog: "Scooby", sexoDog: "Macho" },
+        { id: "2", urlImg: require("../assets/images/dogPng.png"), nameDog: "Alexandre", sexoDog: "Feminino" },
+
+
+    ];
     const navigation = useNavigation();
     const scrollViewPr = (section) => {
         if (scrollViewPr.current) {
@@ -22,13 +28,14 @@ export default function Produtos() {
 
             <View style={styles.containerDois}>
 
-                <Text>
-                    oi
-                </Text>
+
 
             </View>
 
+
         </ScrollView>
+
     </SafeAreaView>
+
 }
 
