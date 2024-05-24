@@ -1,17 +1,15 @@
-
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, Image } from "react-native";
 
 export default function Botao({
-    txtestilos,
-    estilos,
-    onpresstxt,
-    TxtBtn,
+  txtestilos,
+  estilos,
+  onpresstxt,
+  TxtBtn,
+  fundoBotao,
 }) {
-    return (
-        <TouchableOpacity style={estilos} onPress={onpresstxt}>
-            <Text style={txtestilos}>
-                {TxtBtn}
-            </Text>
-        </TouchableOpacity>
-    );
+  return (
+    <TouchableOpacity style={estilos} onPress={onpresstxt}>
+      <Text style={txtestilos}>{TxtBtn}</Text>
+    </TouchableOpacity>
+  );
 }

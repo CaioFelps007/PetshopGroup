@@ -1,7 +1,6 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Feather } from "@expo/vector-icons";
 
-
 // chamando as paginas
 import PageInicial from "../pages/Inicio";
 import Loggedin from "../pages/Login";
@@ -12,77 +11,43 @@ import StackRoutesDois from "./stackDois.routes";
 import Sobre from "../pages/Sobre";
 import Contato from "../pages/Contato";
 
-
 export default function DrawerRoutes() {
-    const Drawer = createDrawerNavigator();
+  const Drawer = createDrawerNavigator();
 
-    return (
-        <Drawer.Navigator
-            screenOptions={{
-                drawerActiveTintColor: "#EFB758",
-                drawerInactiveTintColor: 'white',
-                headerTintColor: '#17395C',
-                drawerStyle: {
-                    borderRadius: 5,
-                    backgroundColor: '#17395C'
-                },
+  return (
+    <Drawer.Navigator
+      screenOptions={{
+        drawerActiveTintColor: "#EFB758",
+        drawerInactiveTintColor: "white",
+        headerTintColor: "#17395C",
+        drawerStyle: {
+          borderRadius: 5,
+          backgroundColor: "#17395C",
+        },
+      }}
+    >
+      <Drawer.Screen
+        name="Inicio"
+        component={StackRoutes}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Feather name="user" color={color} size={size} />
+          ),
+          drawerLabel: "Login e Cadastro",
+          headerShown: false,
+        }}
+      />
 
-            }}>
-
-            <Drawer.Screen
-                name="Inicio"
-                component={StackRoutes}
-                options={{
-                    drawerIcon: ({ color, size }) => (
-                        <Feather name="user" color={color} size={size} />
-                    ),
-                    drawerLabel: "Login e Cadastro",
-                    headerShown: false
-                }}
-            />
-
-
-            <Drawer.Screen
-
-                name="Home"
-                component={StackRoutesDois}
-                options={{
-                    drawerIcon: ({ color, size }) => (
-                        <Feather name="home" color={color} size={size} />
-                    ),
-                    headerShown: true
-                }}
-            />
-
-            <Drawer.Screen
-                name="Sobre"
-                component={Sobre}
-                options={{
-                    drawerIcon: ({ color, size }) => (
-                        <Feather name="info" color={color} size={size} />
-                    ),
-                    drawerLabel: "Sobre",
-                }}
-            />
-
-            <Drawer.Screen
-                name="Contato"
-                component={Contato}
-                options={{
-                    drawerIcon: ({ color, size }) => (
-                        <Feather name="smartphone" color={color} size={size} />
-                    ),
-                    drawerLabel: "Contato",
-                }}
-            />
-
-
-
-
-
-
-        </Drawer.Navigator>
-    )
-
+      <Drawer.Screen
+        name="Home"
+        component={StackRoutesDois}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Feather name="home" color={color} size={size} />
+          ),
+          headerShown: true,
+        }}
+      />
+    </Drawer.Navigator>
+  );
 }
-

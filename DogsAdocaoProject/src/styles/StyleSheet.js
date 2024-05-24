@@ -172,7 +172,7 @@ export const styles = StyleSheet.create({
 
   // ESTILO HOME
   paginaHome: {
-    height: 500,
+    height: 700,
     width: "100%",
     padding: 10,
     alignItems: "center",

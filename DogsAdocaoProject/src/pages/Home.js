@@ -13,8 +13,12 @@ import Textos from "../components/TextComponents";
 import Botao from "../components/ButtonComponents";
 import { useFonts } from "expo-font";
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import BotaoImage from "../components/ButtonImage";
 
 export default function Home() {
+  const navigation = useNavigation();
+
   const [fontsLoaded] = useFonts({
     TitanOne: require("../assets/fonts/TitanOne-Regular.ttf"),
   });
@@ -24,13 +28,30 @@ export default function Home() {
   }
 
   // Constante de estado que define o valor de largura e altura inicial.
-  const [altura, setAltura] = useState(new Animated.Value(100));
+  const [altura, setAltura] = useState(new Animated.Value(500));
+  const [alturaImg, setAlturaImg] = useState(new Animated.Value(350));
+  const [alturaDois, setAlturaDois] = useState(new Animated.Value(0));
 
   // Função que vai rodar uma sequencia de animação, diminuindo a largura e a altura em sequencia.
   Animated.sequence([
-    Animated.timing(altura, {
+    Animated.timing(alturaImg, {
+      toValue: 300,
+      duration: 2000,
+      useNativeDriver: false,
+    }),
+    Animated.timing(alturaImg, {
       toValue: 0,
-      duration: 8000,
+      duration: 4000,
+      useNativeDriver: false,
+    }),
+    Animated.timing(altura, {
+      toValue: 70,
+      duration: 1000,
+      useNativeDriver: false,
+    }),
+    Animated.timing(alturaDois, {
+      toValue: 700,
+      duration: 3000,
       useNativeDriver: false,
     }),
   ]).start();
@@ -84,29 +105,32 @@ export default function Home() {
             style={{
               width: "100%",
               height: altura,
-              justifyContent: "center",
+              justifyContent: "flex-start",
               alignItems: "center",
-              marginTop: 10,
-              marginBottom: 30,
+              marginBottom: 20,
             }}
           >
             <Animated.Image
-              source={require("../assets/images/cachorrinsorri.png")}
-              style={{ height: altura, width: 140, borderRadius: 120 }}
+              source={require("../assets/images/dogrunner2d.png")}
+              style={{
+                height: alturaImg,
+                width: 230,
+              }}
             />
             <Text
               style={{
-                color: "black",
+                color: "#EFB758",
                 textAlign: "center",
                 fontSize: 23,
-                fontWeight: "bold",
+                fontFamily: "TitanOne",
+                marginTop: 25,
               }}
             >
-              Olá Aumigo, Seja bem Vindo !
+              Olá Aumigo, Seja bem Vindo!
             </Text>
           </Animated.View>
 
-          <View style={styles.paginaHome}>
+          <Animated.View style={[styles.paginaHome, { height: alturaDois }]}>
             <Text style={[styles.TextoHome, { fontFamily: "TitanOne" }]}>
               O melhor aplicativo de pet para você !
             </Text>
@@ -126,9 +150,9 @@ export default function Home() {
 
             <View
               style={{
-                height: 100,
+                height: 80,
                 width: "100%",
-                marginTop: 10,
+                marginTop: 20,
                 flexDirection: "row",
                 alignItems: "flex-start",
                 justifyContent: "center",
@@ -142,6 +166,7 @@ export default function Home() {
                   fontFamily: "TitanOne",
                   color: "#17395C",
                 }}
+                onpresstxt={() => navigation.navigate("Sobre")}
               />
               <Botao
                 TxtBtn={"Contato"}
@@ -151,9 +176,64 @@ export default function Home() {
                   fontFamily: "TitanOne",
                   color: "#17395C",
                 }}
+                onpresstxt={() => navigation.navigate("Contato")}
               />
             </View>
-          </View>
+
+            <View>
+              <Textos
+                title={"Nossos Pets!:"}
+                estilotexto={[
+                  styles.TextoHome,
+                  {
+                    fontSize: 18,
+                    fontFamily: "TitanOne",
+                    left: -110,
+                    marginTop: 20,
+                  },
+                ]}
+              />
+
+              <View
+                style={{
+                  height: 170,
+                  width: "100%",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginTop: 10,
+                }}
+              >
+                <BotaoImage
+                  fundoBotao={require("../assets/images/dogsBrincando.png")}
+                  estilos={[styles.btnHome, { height: 135, width: 190 }]}
+                />
+                <View style={{ padding: 10 }}>
+                  <Textos
+                    title={"Encontre"}
+                    estilotexto={{
+                      fontFamily: "TitanOne",
+                      textAlign: "center",
+                      fontSize: 16,
+                    }}
+                  />
+                  <Textos
+                    title={"seu melhor amigo"}
+                    estilotexto={{ fontFamily: "TitanOne" }}
+                  />
+                  <Textos
+                    title={"AQUI!"}
+                    estilotexto={{
+                      fontFamily: "TitanOne",
+                      textAlign: "center",
+                      fontSize: 20,
+                      marginTop: 10,
+                    }}
+                  />
+                </View>
+              </View>
+            </View>
+          </Animated.View>
         </View>
       </ScrollView>
     </SafeAreaView>
