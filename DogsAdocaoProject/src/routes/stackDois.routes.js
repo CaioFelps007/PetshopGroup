@@ -15,8 +15,7 @@ export default function StackRoutesDois() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={Home} />
 
-      <Stack.Screen name="Sobre" component={Sobre} />
-      <Stack.Screen name="Contato" component={Contato} />
+
     </Stack.Navigator>
   );
 }

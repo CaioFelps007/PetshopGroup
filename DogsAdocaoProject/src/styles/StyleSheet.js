@@ -172,7 +172,7 @@ export const styles = StyleSheet.create({
 
   // ESTILO HOME
   paginaHome: {
-    height: 1200,
+    height: 300,
     width: "100%",
     padding: 10,
     alignItems: "center",
@@ -198,6 +198,7 @@ export const styles = StyleSheet.create({
     elevation: 5,
   },
 
+
   btnHome: {
     height: 50,
     width: 170,
@@ -212,40 +213,10 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  btnHomeImage: {
-    width: 180,
-    height: 125,
-    borderRadius: 15,
-    shadowColor: "#000",
-    shadowOpacity: 0.5,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 5 },
-    elevation: 5,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
-  // ESTILO CARROSSEL
-  containerCarousel: {
-    marginTop: 10,
-    shadowColor: "#000",
-    shadowOpacity: 0.5,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 5 },
-    elevation: 5,
-    backgroundColor: "white",
-    borderRadius: 20,
-    width: 400,
-    height: 260,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 20,
-  },
-
-  img: {
-    width: "100%",
-    height: "100%",
-    borderRadius: 20,
+  rolagemPets: {
+    width: '100%',
+    height: 300,
+    backgroundColor: 'black'
   },
 
   //sobre
@@ -272,4 +243,32 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+
+  //contato
+  Contato: {
+    borderColor: "#e1dcc9",
+    borderRadius: 20,
+    backgroundColor: "#e1dcc9",
+    width: 350,
+    height: 500,
+    justifyContent: "flex-start",
+    alignItems: "center",
+    marginTop: 130
+  },
+  textos: {
+    marginTop: 150,
+    width: 300,
+    justifyContent: "flex-start",
+    textAlign: "justify",
+    textAlign: "center"
+  },
+
+  //produtos 
+  produtos: {
+    marginTop: 150,
+    width: 300,
+    justifyContent: "flex-start",
+    textAlign: "justify",
+    textAlign: "center"
+  }
 });

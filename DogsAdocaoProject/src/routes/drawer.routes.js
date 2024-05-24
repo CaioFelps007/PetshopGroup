@@ -48,6 +48,17 @@ export default function DrawerRoutes() {
           headerShown: true,
         }}
       />
+
+      <Drawer.Screen
+        name="Contato"
+        component={Contato}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Feather name="home" color={color} size={size} />
+          ),
+          headerShown: true,
+        }}
+      />
     </Drawer.Navigator>
   );
 }
