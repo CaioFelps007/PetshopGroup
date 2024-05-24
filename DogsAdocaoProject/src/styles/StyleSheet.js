@@ -172,7 +172,7 @@ export const styles = StyleSheet.create({
 
   // ESTILO HOME
   paginaHome: {
-    height: 700,
+    height: 1200,
     width: "100%",
     padding: 10,
     alignItems: "center",
@@ -184,11 +184,38 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
 
+  ButtonDescer: {
+    borderRadius: 20,
+    height: 45,
+    width: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: "#17395C",
+    shadowOffset: { width: 0, height: 5 },
+    shadowColor: "black",
+    shadowRadius: 5,
+    shadowOpacity: 0.5,
+    elevation: 5,
+  },
+
   btnHome: {
     height: 50,
     width: 170,
     borderRadius: 15,
     backgroundColor: "#EFB758",
+    shadowColor: "#000",
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 5 },
+    elevation: 5,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  btnHomeImage: {
+    width: 180,
+    height: 125,
+    borderRadius: 15,
     shadowColor: "#000",
     shadowOpacity: 0.5,
     shadowRadius: 10,
@@ -219,5 +246,30 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     borderRadius: 20,
+  },
+
+  //sobre
+  Image: {
+    width: 100,
+    height: 150
+  },
+  View: {
+    width: 410,
+    height: 350,
+    position: 'relative',
+    bottom: -50
+  },
+  btnSobre: {
+    height: 50,
+    width: 170,
+    borderRadius: 15,
+    backgroundColor: "#17395C",
+    shadowColor: "#000",
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 5 },
+    elevation: 5,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
