@@ -174,27 +174,40 @@ export const styles = StyleSheet.create({
     height: 1000,
     width: "100%",
     alignItems: "center",
-
   },
 
   HeaderUser: {
-    width: '100%',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
+    width: "100%",
+    alignItems: "flex-start",
+    justifyContent: "center",
     height: 160,
-    padding: 15
+    padding: 25,
   },
 
   hduser: {
     fontSize: 17,
   },
 
-  bodyHome: {
+  btnsHomePage: {
+    shadowOffset: { width: 0, height: 5 },
+    shadowColor: "black",
+    shadowRadius: 5,
+    shadowOpacity: 5,
+    elevation: 9,
+    width: 110,
+    height: 39,
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 17,
+  },
 
+  bodyHome: {
+    height: 1000,
   },
 
   flatListContent: {
-    justifyContent: "center",
+    justifyContent: "flex-start",
     flexGrow: 1,
     alignItems: "center",
   },
@@ -205,18 +218,16 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-
-
   //sobre
   Image: {
     width: 100,
-    height: 150
+    height: 150,
   },
   View: {
     width: 410,
     height: 350,
-    position: 'relative',
-    bottom: -50
+    position: "relative",
+    bottom: -50,
   },
   btnSobre: {
     height: 50,
@@ -241,28 +252,28 @@ export const styles = StyleSheet.create({
     height: 500,
     justifyContent: "flex-start",
     alignItems: "center",
-    marginTop: 130
+    marginTop: 130,
   },
   textos: {
     marginTop: 90,
     width: 300,
     justifyContent: "flex-start",
     textAlign: "justify",
-    textAlign: "center"
+    textAlign: "center",
   },
   botao: {
     backgroundColor: "#c24229",
     width: 100,
     borderRadius: 5,
     height: 25,
-    marginTop: 10
+    marginTop: 10,
   },
   btnModal: {
     backgroundColor: "#c24229",
     width: 120,
     borderRadius: 5,
     height: 30,
-    marginTop: 15
+    marginTop: 15,
   },
   modal: {
     borderColor: "#e1dcc9",
@@ -274,12 +285,12 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  //produtos 
+  //produtos
   produtosTxt: {
     marginTop: 150,
     width: 300,
     justifyContent: "flex-start",
     textAlign: "justify",
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });

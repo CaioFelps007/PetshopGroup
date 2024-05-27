@@ -7,6 +7,7 @@ import Cadastro from "../pages/Cadastro";
 import Home from "../pages/Home";
 import Sobre from "../pages/Sobre";
 import Contato from "../pages/Contato";
+import Descricao from "../pages/Descricao";
 
 export default function StackRoutesDois() {
   const Stack = createNativeStackNavigator();
@@ -14,8 +15,7 @@ export default function StackRoutesDois() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={Home} />
-
-
+      <Stack.Screen name="Descrição" component={Descricao} />
     </Stack.Navigator>
   );
 }
