@@ -1,25 +1,23 @@
 import {
   View,
-  Text,
-  ImageBackground,
   SafeAreaView,
-  Image,
+  FlatList,
+  Dimensions,
   Animated,
   TouchableOpacity,
-  Dimensions,
-  FlatList,
+  Image,
+  Text,
 } from "react-native";
-
-import { styles } from "../styles/StyleSheet";
 import { useFonts } from "expo-font";
 import React, { useRef, useState, useEffect } from "react";
 
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 
+import { styles } from "../styles/StyleSheet";
+
 import Textos from "../components/TextComponents";
 import Botao from "../components/ButtonComponents";
-import Modall from "../components/ModalComponent";
 import HeaderHome from "../components/HeaderHome";
 
 const screenWidth = Dimensions.get("window").width;
@@ -152,42 +150,14 @@ const AnimatedItem = ({ item }) => {
   );
 };
 
-export default function Home() {
+export default function Brinquedos() {
   const data = [
     {
       id: "1",
-      urlImg: require("../assets/images/cachorroToys.png"),
+      urlImg: require("../assets/images/dogsBrincando.png"),
       nameDog: "Scooby",
       sexoDog: "Macho",
       IdadeDog: "4 meses",
-    },
-    {
-      id: "2",
-      urlImg: require("../assets/images/dogPng.png"),
-      nameDog: "Pandora",
-      sexoDog: "Femea",
-      IdadeDog: "14 anos",
-    },
-    {
-      id: "3",
-      urlImg: require("../assets/images/cachorrinsorri.png"),
-      nameDog: "Goti",
-      sexoDog: "Macho",
-      IdadeDog: "12 meses",
-    },
-    {
-      id: "4",
-      urlImg: require("../assets/images/dogrunner2d.png"),
-      nameDog: "Aikha",
-      sexoDog: "Femea",
-      IdadeDog: "4 anos",
-    },
-    {
-      id: "5",
-      urlImg: require("../assets/images/dogrunner2d.png"),
-      nameDog: "Peter",
-      sexoDog: "Macho",
-      IdadeDog: "3 anos",
     },
   ];
 
@@ -201,7 +171,7 @@ export default function Home() {
   }
 
   return (
-    <SafeAreaView style={styles.containerDois}>
+    <SafeAreaView>
       <View style={styles.bodyHome}>
         <FlatList
           ListHeaderComponent={HeaderHome}

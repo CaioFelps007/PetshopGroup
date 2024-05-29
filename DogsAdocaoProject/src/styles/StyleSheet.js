@@ -180,12 +180,13 @@ export const styles = StyleSheet.create({
     width: "100%",
     alignItems: "flex-start",
     justifyContent: "center",
-    height: 160,
+    height: 200,
     padding: 25,
   },
 
   hduser: {
     fontSize: 17,
+    marginTop: 50,
   },
 
   btnsHomePage: {
@@ -202,8 +203,8 @@ export const styles = StyleSheet.create({
     borderRadius: 17,
   },
 
-  bodyHome: {
-    height: 1000,
+  activeButtonText: {
+    color: "#17395C",
   },
 
   flatListContent: {
@@ -292,5 +293,15 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-start",
     textAlign: "justify",
     textAlign: "center",
+  },
+  //carrinho
+  carrinho: {
+    borderColor: "#e1dcc9",
+    borderRadius: 20,
+    backgroundColor: "#e1dcc9",
+    width: 410,
+    height: 1000,
+    justifyContent: "flex-start",
+    alignItems: "center",
   },
 });

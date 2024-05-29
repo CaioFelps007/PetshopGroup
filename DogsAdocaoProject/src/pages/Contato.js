@@ -2,13 +2,10 @@ import { SafeAreaView, View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Textos from "../components/TextComponents";
 import { styles } from "../styles/StyleSheet";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Modal } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native";
-
-import { FontAwesome5 } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { useFonts } from "expo-font";
 

@@ -10,6 +10,7 @@ import Home from "../pages/Home";
 import StackRoutesDois from "./stackDois.routes";
 import Sobre from "../pages/Sobre";
 import Contato from "../pages/Contato";
+import Carrinho from "../pages/carrinho";
 
 export default function DrawerRoutes() {
   const Drawer = createDrawerNavigator();
@@ -40,7 +41,7 @@ export default function DrawerRoutes() {
 
       <Drawer.Screen
         name="Home"
-        component={StackRoutesDois}
+        component={StackRoutes}
         options={{
           drawerIcon: ({ color, size }) => (
             <Feather name="home" color={color} size={size} />
@@ -71,9 +72,16 @@ export default function DrawerRoutes() {
         }}
       />
 
-
+      <Drawer.Screen
+        name="Carrinho"
+        component={Carrinho}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Feather name="home" color={color} size={size} />
+          ),
+          headerShown: true,
+        }}
+      />
     </Drawer.Navigator>
-
-
   );
 }
