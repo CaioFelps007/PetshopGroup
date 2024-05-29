@@ -14,6 +14,21 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-start",
   },
 
+  containerDoisSobre: {
+    height: 1100,
+    width: '100%',
+    backgroundColor: "#fff",
+    justifyContent: "flex-start",
+  },
+
+  containerSobre: {
+    height: 1000,
+    width: "100%",
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
   // TELA INICIAL
   boasVindas: {
     width: "100%",
@@ -186,7 +201,7 @@ export const styles = StyleSheet.create({
 
   hduser: {
     fontSize: 17,
-    marginTop: 50,
+    marginTop: 20,
   },
 
   btnsHomePage: {
@@ -220,28 +235,25 @@ export const styles = StyleSheet.create({
   },
 
   //sobre
-  Image: {
-    width: 100,
-    height: 150,
-  },
-  View: {
-    width: 410,
+  ViewSobre: {
+    width: "70%",
     height: 350,
-    position: "relative",
-    bottom: -50,
-  },
-  btnSobre: {
-    height: 50,
-    width: 170,
-    borderRadius: 15,
-    backgroundColor: "#17395C",
-    shadowColor: "#000",
-    shadowOpacity: 0.5,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 5 },
-    elevation: 5,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "red",
+
+  },
+  textSobre: {
+    fontSize: 15,
+    fontFamily: "LoraItalic",
+    textAlign: "center",
+    width: 290,
+  },
+  textSobre2: {
+    fontSize: 15,
+    fontFamily: "FjallaOne",
+    textAlign: "center",
+    width: 290,
   },
 
   //contato
@@ -281,7 +293,7 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "#e1dcc9",
     width: 410,
-    height: 1000,
+    height: 1150,
     justifyContent: "flex-start",
     alignItems: "center",
   },
@@ -303,5 +315,29 @@ export const styles = StyleSheet.create({
     height: 1000,
     justifyContent: "flex-start",
     alignItems: "center",
+
   },
+  carrinhoView: {
+    borderRadius: 20,
+    width: '100%',
+    height: 250,
+    justifyContent: "center",
+
+
+  },
+
+  imageProductCarrinho: {
+    height: 220,
+    width: 180,
+    padding: 10,
+    borderRadius: 15,
+    borderWidth: 1,
+    borderColor: 'black'
+  },
+  containerTres: {
+    backgroundColor: "#e1dcc9",
+    flex: 1,
+    justifyContent: "flex-start",
+
+  }
 });

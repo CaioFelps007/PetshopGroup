@@ -68,7 +68,7 @@ const AnimatedItem = ({ item }) => {
         shadowRadius: 8.3,
         elevation: 13,
         borderRadius: 20,
-        backgroundColor: "#EFB758",
+        backgroundColor: "#17395C",
       }}
     >
       <TouchableOpacity onPress={() => dispararAnimation()}>
@@ -106,22 +106,22 @@ const AnimatedItem = ({ item }) => {
             }}
           >
             <Text style={{ fontFamily: "TitanOne", fontSize: 19 }}>
-              {item.nameDog}
+              {item.toyDog}
             </Text>
             <Text style={{ fontFamily: "LoraItalic" }}>
-              {item.sexoDog}, {item.IdadeDog}
+              {item.preco}
             </Text>
           </View>
         </Animated.View>
       </TouchableOpacity>
       {mostrarTouch && (
         <>
-          <View style={{ flex: 1, backgroundColor: "#17395C" }}>
+          <View style={{ flex: 1 }}>
             <TouchableOpacity
               style={[
                 styles.iconContainer,
                 {
-                  backgroundColor: "#EFB758",
+                  backgroundColor: "#17395C",
                   borderTopRightRadius: 20,
                   borderBottomRightRadius: 20,
                 },
@@ -132,18 +132,7 @@ const AnimatedItem = ({ item }) => {
             </TouchableOpacity>
           </View>
 
-          <TouchableOpacity
-            style={[
-              styles.iconContainer,
-              {
-                backgroundColor: "#17395C",
-                borderTopRightRadius: 20,
-                borderBottomRightRadius: 20,
-              },
-            ]}
-          >
-            <MaterialIcons name="description" size={24} color="white" />
-          </TouchableOpacity>
+
         </>
       )}
     </View>
@@ -155,9 +144,9 @@ export default function Brinquedos() {
     {
       id: "1",
       urlImg: require("../assets/images/dogsBrincando.png"),
-      nameDog: "Scooby",
-      sexoDog: "Macho",
-      IdadeDog: "4 meses",
+      toyDog: "Osso",
+      preco: "",
+      CompraButton: "",
     },
   ];
 

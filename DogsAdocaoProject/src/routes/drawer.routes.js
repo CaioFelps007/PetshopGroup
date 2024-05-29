@@ -7,46 +7,39 @@ import Loggedin from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import StackRoutes from "./stack.routes";
 import Home from "../pages/Home";
-import StackRoutesDois from "./stackDois.routes";
 import Sobre from "../pages/Sobre";
 import Contato from "../pages/Contato";
 import Carrinho from "../pages/carrinho";
+import CustomDrawer from "../components/CustomDrawer";
 
 export default function DrawerRoutes() {
   const Drawer = createDrawerNavigator();
 
   return (
     <Drawer.Navigator
+      drawerContent={CustomDrawer}
       screenOptions={{
         drawerActiveTintColor: "#EFB758",
         drawerInactiveTintColor: "white",
         headerTintColor: "#17395C",
         drawerStyle: {
-          borderRadius: 5,
+          borderBottomRightRadius: 40,
+          borderTopRightRadius: 40,
           backgroundColor: "#17395C",
         },
+        headerShown: true
+
       }}
     >
-      <Drawer.Screen
-        name="Inicio"
-        component={StackRoutes}
-        options={{
-          drawerIcon: ({ color, size }) => (
-            <Feather name="user" color={color} size={size} />
-          ),
-          drawerLabel: "Login e Cadastro",
-          headerShown: false,
-        }}
-      />
+
 
       <Drawer.Screen
-        name="Home"
+        name="Começo"
         component={StackRoutes}
         options={{
           drawerIcon: ({ color, size }) => (
             <Feather name="home" color={color} size={size} />
           ),
-          headerShown: true,
         }}
       />
 
@@ -55,7 +48,7 @@ export default function DrawerRoutes() {
         component={Contato}
         options={{
           drawerIcon: ({ color, size }) => (
-            <Feather name="home" color={color} size={size} />
+            <Feather name="smartphone" color={color} size={size} />
           ),
           headerShown: true,
         }}
@@ -66,7 +59,7 @@ export default function DrawerRoutes() {
         component={Sobre}
         options={{
           drawerIcon: ({ color, size }) => (
-            <Feather name="home" color={color} size={size} />
+            <Feather name="info" color={color} size={size} />
           ),
           headerShown: true,
         }}
@@ -77,7 +70,7 @@ export default function DrawerRoutes() {
         component={Carrinho}
         options={{
           drawerIcon: ({ color, size }) => (
-            <Feather name="home" color={color} size={size} />
+            <Feather name="shopping-cart" color={color} size={size} />
           ),
           headerShown: true,
         }}

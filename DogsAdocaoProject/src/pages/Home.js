@@ -202,15 +202,15 @@ export default function Home() {
 
   return (
     <SafeAreaView style={styles.containerDois}>
-      <View style={styles.bodyHome}>
-        <FlatList
-          ListHeaderComponent={HeaderHome}
-          data={data}
-          renderItem={({ item }) => <AnimatedItem item={item} />}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={styles.flatListContent}
-        />
-      </View>
+
+      <FlatList
+        ListHeaderComponent={HeaderHome}
+        data={data}
+        renderItem={({ item }) => <AnimatedItem item={item} />}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={styles.flatListContent}
+      />
+
     </SafeAreaView>
   );
 }
