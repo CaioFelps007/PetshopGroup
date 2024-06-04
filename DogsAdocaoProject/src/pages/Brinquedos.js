@@ -19,6 +19,7 @@ import { styles } from "../styles/StyleSheet";
 import Textos from "../components/TextComponents";
 import Botao from "../components/ButtonComponents";
 import HeaderHome from "../components/HeaderHome";
+import { useNavigation } from "@react-navigation/native";
 
 const screenWidth = Dimensions.get("window").width;
 const largFinal = screenWidth * 0.7;
@@ -49,6 +50,7 @@ const AnimatedItem = ({ item }) => {
     setMostrar(!mostrar);
     setMostrarTouch(true);
   };
+  const navigation = useNavigation();
 
   return (
     <View
@@ -108,9 +110,7 @@ const AnimatedItem = ({ item }) => {
             <Text style={{ fontFamily: "TitanOne", fontSize: 19 }}>
               {item.toyDog}
             </Text>
-            <Text style={{ fontFamily: "LoraItalic" }}>
-              {item.preco}
-            </Text>
+            <Text style={{ fontFamily: "LoraItalic" }}>{item.preco}</Text>
           </View>
         </Animated.View>
       </TouchableOpacity>
@@ -126,13 +126,11 @@ const AnimatedItem = ({ item }) => {
                   borderBottomRightRadius: 20,
                 },
               ]}
-              onPress={() => console.log("HELLO")}
+              onPress={() => navigation.navigate("Carrinho")}
             >
-              <FontAwesome name="heart" size={24} color="white" />
+              <FontAwesome name="shopping-cart" size={24} color="white" />
             </TouchableOpacity>
           </View>
-
-
         </>
       )}
     </View>
@@ -143,9 +141,30 @@ export default function Brinquedos() {
   const data = [
     {
       id: "1",
-      urlImg: require("../assets/images/dogsBrincando.png"),
-      toyDog: "Osso",
-      preco: "",
+      urlImg: require("../assets/images/bolaamericana.png"),
+      toyDog: "Bola de Futebol Americano!",
+      preco: "59.90",
+      CompraButton: "",
+    },
+    {
+      id: "2",
+      urlImg: require("../assets/images/cordapatinhas.png"),
+      toyDog: "Corda de Morder!",
+      preco: "59.90",
+      CompraButton: "",
+    },
+    {
+      id: "3",
+      urlImg: require("../assets/images/ossolaranja.png"),
+      toyDog: "Osso de borracha!",
+      preco: "59.90",
+      CompraButton: "",
+    },
+    {
+      id: "4",
+      urlImg: require("../assets/images/ossoverde.png"),
+      toyDog: "Kit Ossos de Pelúcia!",
+      preco: "59.90",
       CompraButton: "",
     },
   ];

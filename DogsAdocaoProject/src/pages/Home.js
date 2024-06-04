@@ -21,6 +21,7 @@ import Textos from "../components/TextComponents";
 import Botao from "../components/ButtonComponents";
 import Modall from "../components/ModalComponent";
 import HeaderHome from "../components/HeaderHome";
+import { useNavigation } from "@react-navigation/native";
 
 const screenWidth = Dimensions.get("window").width;
 const largFinal = screenWidth * 0.7;
@@ -51,6 +52,8 @@ const AnimatedItem = ({ item }) => {
     setMostrar(!mostrar);
     setMostrarTouch(true);
   };
+
+  const navigation = useNavigation();
 
   return (
     <View
@@ -128,7 +131,7 @@ const AnimatedItem = ({ item }) => {
                   borderBottomRightRadius: 20,
                 },
               ]}
-              onPress={() => console.log("HELLO")}
+              onPress={() => navigation.navigate("Contato")}
             >
               <FontAwesome name="heart" size={24} color="white" />
             </TouchableOpacity>
@@ -202,7 +205,6 @@ export default function Home() {
 
   return (
     <SafeAreaView style={styles.containerDois}>
-
       <FlatList
         ListHeaderComponent={HeaderHome}
         data={data}
@@ -210,7 +212,6 @@ export default function Home() {
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.flatListContent}
       />
-
     </SafeAreaView>
   );
 }

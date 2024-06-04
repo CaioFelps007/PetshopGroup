@@ -56,8 +56,12 @@ export default function HeaderHome() {
 
         <Botao
           TxtBtn={"Rações"}
-          estilos={styles.btnsHomePage}
-          txtestilos={{ fontFamily: "TitanOne" }}
+          estilos={[styles.btnsHomePage, activeButton === "Rações"]}
+          txtestilos={[
+            activeButton === "Rações" && styles.activeButtonText,
+            { fontFamily: "TitanOne" },
+          ]}
+          onpresstxt={() => handleButtonPress("Rações")}
         />
       </View>
     </SafeAreaView>

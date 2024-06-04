@@ -6,6 +6,7 @@ import Loggedin from "../pages/Login";
 import Cadastro from "../pages/Cadastro";
 import Home from "../pages/Home";
 import Brinquedos from "../pages/Brinquedos";
+import Racoes from "../pages/Racoes";
 
 export default function StackRoutes() {
   const Stack = createNativeStackNavigator();
@@ -17,6 +18,7 @@ export default function StackRoutes() {
       <Stack.Screen name="Login" component={Loggedin} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Brinquedos" component={Brinquedos} />
+      <Stack.Screen name="Rações" component={Racoes} />
     </Stack.Navigator>
   );
 }
