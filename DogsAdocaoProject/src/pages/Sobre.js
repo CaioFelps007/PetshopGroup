@@ -27,6 +27,7 @@ export default function Sobre() {
   const aparecendo = new Animated.Value(0);
 
   useEffect(() => {
+    alert("ESTOUAQUI!")
     if (isFocused) {
       readSobre();
     }
@@ -35,11 +36,10 @@ export default function Sobre() {
   async function readSobre() {
     try {
       const response = await axios.get(
-        "http://192.168.1.143:3000/api/readSobre"
+        "http://10.0.2.15:3000/api/readSobre"
       );
       setTextSobre(response.data);
       console.log(response.data);
-      console.log(textSobre[0].conteudo);
     } catch (error) {
       console.error("Erro ao buscar dados:", error);
     }
@@ -117,9 +117,9 @@ export default function Sobre() {
           }}
         >
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text>
+            {/* <Text>
               {textSobre[0].conteudo ? textSobre[0].conteudo : "Carregando..."}
-            </Text>
+            </Text> */}
           </ScrollView>
         </Animated.View>
       </View>

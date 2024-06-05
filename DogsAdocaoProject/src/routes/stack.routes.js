@@ -7,6 +7,7 @@ import Cadastro from "../pages/Cadastro";
 import Home from "../pages/Home";
 import Brinquedos from "../pages/Brinquedos";
 import Racoes from "../pages/Racoes";
+import Descricao from "../pages/Descricao";
 
 export default function StackRoutes() {
   const Stack = createNativeStackNavigator();
@@ -19,6 +20,7 @@ export default function StackRoutes() {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Brinquedos" component={Brinquedos} />
       <Stack.Screen name="Rações" component={Racoes} />
+      <Stack.Screen name="Descricao" component={Descricao} />
     </Stack.Navigator>
   );
 }

@@ -12,7 +12,7 @@ app.use(cors());
 const db = mysql.createConnection({
   host: "localhost",
   user: "phpmyadmin",
-  password: "aluno",
+  password: "caio",
   database: "dogsbanco",
 });
 
@@ -23,6 +23,11 @@ db.connect((err) => {
     console.log("Conectado ao MySQL");
   }
 });
+
+// Rota dos brinquedos
+app.post('api/brinquedos', (req, res) => {
+
+})
 
 // Rota para criar usuário
 app.post("/api/createUser", (req, res) => {

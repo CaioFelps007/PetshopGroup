@@ -233,6 +233,15 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  viewModal: {
+    borderRadius: 20,
+    backgroundColor: "#e1dcc9",
+    width: "80%",
+    height: 650,
+    justifyContent: "center",
+    alignItems: "center",
+
+  },
 
   //sobre
   ViewSobre: {
@@ -334,5 +343,20 @@ export const styles = StyleSheet.create({
     backgroundColor: "#e1dcc9",
     flex: 1,
     justifyContent: "flex-start",
+  },
+
+  ButtonFooter: {
+    borderRadius: 15,
+    shadowOffset: { width: 0, height: 5 },
+    shadowColor: "black",
+    shadowRadius: 5,
+    shadowOpacity: 0.5,
+    elevation: 5,
+    backgroundColor: '#EFB758',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 100,
+    height: 50,
+    marginBottom: 20, right: 5
   },
 });

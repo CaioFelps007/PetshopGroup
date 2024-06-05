@@ -9,7 +9,9 @@ import StackRoutes from "./stack.routes";
 import Home from "../pages/Home";
 import Sobre from "../pages/Sobre";
 import Contato from "../pages/Contato";
-import Carrinho from "../pages/carrinho";
+import Carrinho from "../pages/Carrinho";
+
+
 import CustomDrawer from "../components/CustomDrawer";
 
 export default function DrawerRoutes() {

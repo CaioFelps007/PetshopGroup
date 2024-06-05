@@ -188,7 +188,7 @@ export default function Brinquedos() {
 
   return (
     <SafeAreaView>
-      <View style={styles.bodyHome}>
+      <View style={[styles.bodyHome, { backgroundColor: 'white' }]}>
         <FlatList
           ListHeaderComponent={HeaderHome}
           data={data}

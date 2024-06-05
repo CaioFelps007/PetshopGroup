@@ -158,21 +158,21 @@ export default function Racoes() {
     {
       id: "2",
       urlImg: require("../assets/images/pedigreePreto.png"),
-      alimentDog: "Corda Pedigree Adultos 1,1kg!",
+      alimentDog: "Ração Pedigree Adultos 1,1kg!",
       preco: "109.90",
       CompraButton: "",
     },
     {
       id: "3",
       urlImg: require("../assets/images/pedigreePuppy.png"),
-      alimentDog: "Pedigree filhotes!",
+      alimentDog: "Ração Pedigree filhotes!",
       preco: "60.90",
       CompraButton: "",
     },
     {
       id: "4",
       urlImg: require("../assets/images/pedigreeSmallDog.png"),
-      alimentDog: "Pedigree para pequenos!",
+      alimentDog: "Ração Pedigree para pequenos!",
       preco: "57.90",
       CompraButton: "",
     },
@@ -189,7 +189,7 @@ export default function Racoes() {
 
   return (
     <SafeAreaView>
-      <View style={styles.bodyHome}>
+      <View style={[styles.bodyHome, { backgroundColor: 'white' }]}>
         <FlatList
           ListHeaderComponent={HeaderHome}
           data={data}
