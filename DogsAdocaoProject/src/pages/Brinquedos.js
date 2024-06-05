@@ -110,7 +110,15 @@ const AnimatedItem = ({ item }) => {
             <Text style={{ fontFamily: "TitanOne", fontSize: 19 }}>
               {item.toyDog}
             </Text>
-            <Text style={{ fontFamily: "LoraItalic" }}>{item.preco}</Text>
+            <Text
+              style={{
+                fontFamily: "LoraItalic",
+                color: "green",
+                marginTop: 10,
+              }}
+            >
+              R${item.preco}
+            </Text>
           </View>
         </Animated.View>
       </TouchableOpacity>
@@ -149,7 +157,7 @@ export default function Brinquedos() {
     {
       id: "2",
       urlImg: require("../assets/images/cordapatinhas.png"),
-      toyDog: "Corda de Morder!",
+      toyDog: "Corda Mordedora!",
       preco: "59.90",
       CompraButton: "",
     },

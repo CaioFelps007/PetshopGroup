@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
 
   containerDoisSobre: {
     height: 1100,
-    width: '100%',
+    width: "100%",
     backgroundColor: "#fff",
     justifyContent: "flex-start",
   },
@@ -241,7 +241,6 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "red",
-
   },
   textSobre: {
     fontSize: 15,
@@ -315,15 +314,12 @@ export const styles = StyleSheet.create({
     height: 1000,
     justifyContent: "flex-start",
     alignItems: "center",
-
   },
   carrinhoView: {
     borderRadius: 20,
-    width: '100%',
+    width: "100%",
     height: 250,
     justifyContent: "center",
-
-
   },
 
   imageProductCarrinho: {
@@ -332,12 +328,11 @@ export const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 15,
     borderWidth: 1,
-    borderColor: 'black'
+    borderColor: "black",
   },
   containerTres: {
     backgroundColor: "#e1dcc9",
     flex: 1,
     justifyContent: "flex-start",
-
-  }
+  },
 });

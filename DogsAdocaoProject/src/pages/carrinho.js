@@ -1,14 +1,25 @@
 import { styles } from "../styles/StyleSheet";
-import { TouchableOpacity, ImageBackground, Image, View, Text, FlatList, Dimensions, Animated, SafeAreaView } from "react-native";
+import {
+  TouchableOpacity,
+  ImageBackground,
+  Image,
+  View,
+  Text,
+  FlatList,
+  Dimensions,
+  Animated,
+  SafeAreaView,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Textos from "../components/TextComponents";
 import { useFonts } from "expo-font";
 import Botao from "../components/ButtonComponents";
 import React, { useRef, useState, useEffect } from "react";
 import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome6 } from "@expo/vector-icons";
 import HeaderCarrinho from "../components/HeaderCarrinho";
 import { Header } from "react-native/Libraries/NewAppScreen";
-
+import HeaderHome from "../components/HeaderHome";
 
 const screenWidth = Dimensions.get("window").width;
 const largFinal = screenWidth * 0.7;
@@ -43,7 +54,7 @@ const AnimatedItem = ({ item }) => {
   return (
     <View
       style={{
-        height: 130,
+        height: 120,
         width: screenWidth * 0.9,
         flexDirection: "row",
         marginBottom: 10,
@@ -58,10 +69,9 @@ const AnimatedItem = ({ item }) => {
         shadowRadius: 8.3,
         elevation: 13,
         borderRadius: 20,
-        backgroundColor: "#17395C",
+        backgroundColor: "white",
       }}
     >
-
       <TouchableOpacity onPress={() => dispararAnimation()}>
         <Animated.View
           style={{
@@ -99,9 +109,7 @@ const AnimatedItem = ({ item }) => {
             <Text style={{ fontFamily: "TitanOne", fontSize: 19 }}>
               {item.Produto}
             </Text>
-            <Text style={{ fontFamily: "LoraItalic" }}>
-              {item.preco}
-            </Text>
+            <Text style={{ fontFamily: "LoraItalic" }}>{item.preco}</Text>
           </View>
         </Animated.View>
       </TouchableOpacity>
@@ -113,17 +121,22 @@ const AnimatedItem = ({ item }) => {
                 styles.iconContainer,
                 {
                   backgroundColor: "#17395C",
-                  borderTopRightRadius: 20,
-                  borderBottomRightRadius: 20,
+                  borderRadius: 20,
                 },
               ]}
               onPress={() => console.log("HELLO")}
             >
-              <FontAwesome name="heart" size={24} color="white" />
+              <FontAwesome6
+                name="hand-holding-dollar"
+                size={30}
+                color="white"
+              />
+
+              <Text style={{ color: "white", fontFamily: "TitanOne" }}>
+                Pagar
+              </Text>
             </TouchableOpacity>
           </View>
-
-
         </>
       )}
     </View>
@@ -134,8 +147,8 @@ export default function Carrinho() {
   const data = [
     {
       id: "1",
-      urlImg: require("../assets/images/dogsBrincando.png"),
-      Produto: "Osso",
+      urlImg: require("../assets/images/ossoverde.png"),
+      Produto: "Kit Osso pelúcia!",
       preco: "",
     },
   ];
@@ -151,11 +164,12 @@ export default function Carrinho() {
   }
 
   return (
-
-
-    <SafeAreaView >
-      <View style={styles.bodyHome}>
+    <SafeAreaView>
+      <View
+        style={[styles.bodyHome, { backgroundColor: "white", height: 800 }]}
+      >
         <FlatList
+          ListHeaderComponent={HeaderCarrinho}
           data={data}
           renderItem={({ item }) => <AnimatedItem item={item} />}
           keyExtractor={(item) => item.id}
@@ -163,6 +177,5 @@ export default function Carrinho() {
         />
       </View>
     </SafeAreaView>
-
   );
 }

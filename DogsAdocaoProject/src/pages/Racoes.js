@@ -111,7 +111,15 @@ const AnimatedItem = ({ item }) => {
             <Text style={{ fontFamily: "TitanOne", fontSize: 19 }}>
               {item.alimentDog}
             </Text>
-            <Text style={{ fontFamily: "LoraItalic" }}>{item.preco}</Text>
+            <Text
+              style={{
+                fontFamily: "LoraItalic",
+                color: "green",
+                marginTop: 10,
+              }}
+            >
+              R${item.preco}
+            </Text>
           </View>
         </Animated.View>
       </TouchableOpacity>
