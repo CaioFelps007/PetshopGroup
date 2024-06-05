@@ -1,4 +1,27 @@
 # projeto-restaurado
-vamo recomeçar meus fio
 
-LIVE SHARE: https://prod.liveshare.vsengsaas.visualstudio.com/join?FA1B97BE8E18170A5F94F562A00B6ED9E1EE
+**PROJETO PET LOVE**
+
+**capotes que precisam ser instalados**
+*Axios
+*Pacote de Fontes 
+*Pacote de rotas (Drawer, Stack)
+*Pacote de resposta se gestos
+
+**PAGES USADAS**
+Cadastro 
+Contato 
+Denuncia 
+Home
+Login
+Pets
+Produtos
+Sobre
+Descrição dos pets
+carrinho
+pagamento
+
+**COMPONENTES USADAOS**
+texto
+trxtImpute
+BOTAO
