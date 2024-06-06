@@ -59,13 +59,24 @@ Carrinho;
 Pagamento;
 
 ===================================================================================================================================
+
 **COMPONENTES USADAOS**
+
 Texto;
+
 Text Input;
+
 Botão;
+
 Botão com Imagem;
+
 HeaderHome;
+
 HeaderCarrinho;
+
 FooterCarrinho;
+
 Modal;
+
 CustomDrawer;
+
