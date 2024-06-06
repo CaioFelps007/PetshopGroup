@@ -5,7 +5,7 @@ LIVE SHARE : https://prod.liveshare.vsengsaas.visualstudio.com/join?92B4A7865441
 
 **Pacotes que precisam ser instalados**
 
-DEPENDENCIAS DO EXPO:
+**DEPENDENCIAS DO EXPO:**
 
 npx expo install react-native-web react-dom @expo/metro-runtime
 
@@ -25,10 +25,10 @@ npm install @react-navigation/native;
 **Pacote de resposta de gestos**
 npx expo install react-native-gesture-handler react-native-reanimated
 
-*nodemon
+**nodemon**
 npm install -g nodemon
 
-&
+& ou
 
 **NPM INSTALL** 
 
