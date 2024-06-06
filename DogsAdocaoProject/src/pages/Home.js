@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Dimensions,
   FlatList,
-  Modal
+  Modal,
 } from "react-native";
 
 import { styles } from "../styles/StyleSheet";
@@ -149,7 +149,7 @@ const AnimatedItem = ({ item }) => {
           </View>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate('Descricao', { item })}
+            onPress={() => navigation.navigate("Descricao", { item })}
             style={[
               styles.iconContainer,
               {
@@ -160,7 +160,6 @@ const AnimatedItem = ({ item }) => {
             ]}
           >
             <MaterialIcons name="description" size={24} color="white" />
-
           </TouchableOpacity>
         </>
       )}
@@ -173,10 +172,13 @@ export default function Home() {
     {
       id: "1",
       urlImg: require("../assets/images/scooby.png"),
+      urlImg1: require("../assets/images/pandora.png"),
+      urlImg2: require("../assets/images/goti.png"),
       nameDog: "Scooby",
       sexoDog: "Macho",
       IdadeDog: "4 meses",
-      Descricao: "Scooby tem 4 meses, é um cão com a personalidade forte, brincalhão, ótimo para fazer companhia,Possui todas suas vacinas em dia, não foi castrado por conta de seu tempo de vida (castração é permitido depois de 6 meses de vida do animal). Seu brinquedo preferido é uma bolinha laranja.",
+      Descricao:
+        "Scooby tem 4 meses, é um cão com a personalidade forte, brincalhão, ótimo para fazer companhia,Possui todas suas vacinas em dia, não foi castrado por conta de seu tempo de vida (castração é permitido depois de 6 meses de vida do animal). Seu brinquedo preferido é uma bolinha laranja.",
       Raca: "Vira-Lata",
     },
     {
@@ -185,7 +187,8 @@ export default function Home() {
       nameDog: "Pandora",
       sexoDog: "Femea",
       IdadeDog: "14 anos",
-      Descricao: "Pandora tem 14 anos, é uma cachorra mais tranquila por conta de sua idade, ótima para fazer companhia, Possui todas suas vacinas em dia, já foi castrada com 1 ano de vida. Seu brinquedo preferido é um pompom.",
+      Descricao:
+        "Pandora tem 14 anos, é uma cachorra mais tranquila por conta de sua idade, ótima para fazer companhia, Possui todas suas vacinas em dia, já foi castrada com 1 ano de vida. Seu brinquedo preferido é um pompom.",
       Raca: "Border-collie",
     },
     {
@@ -194,7 +197,8 @@ export default function Home() {
       nameDog: "Goti",
       sexoDog: "Macho",
       IdadeDog: "12 meses",
-      Descricao: "Goti tem 12 meses, é um cão brincalhão, ótimo para conviver com crianças, Goti foi resgatado de um local abandonado, não foi castrado, precisa tomar vermifugo e vacina contra gripe canina. seu brinquedo preferido é um osso de borracha.",
+      Descricao:
+        "Goti tem 12 meses, é um cão brincalhão, ótimo para conviver com crianças, Goti foi resgatado de um local abandonado, não foi castrado, precisa tomar vermifugo e vacina contra gripe canina. seu brinquedo preferido é um osso de borracha.",
       Raca: "Vira-Lata",
     },
     {
@@ -203,7 +207,8 @@ export default function Home() {
       nameDog: "Aikha",
       sexoDog: "Femea",
       IdadeDog: "4 anos",
-      Descricao: "Aikha tem 4 anos, possui uma personalidade forte, bricalhona, ótima para fazer companhia, Possui todas suas vacinas em dia, foi castrada com 3 anos após dar a luz a 4 filhotes. Seu passatempo preferido é morder chinelo.",
+      Descricao:
+        "Aikha tem 4 anos, possui uma personalidade forte, bricalhona, ótima para fazer companhia, Possui todas suas vacinas em dia, foi castrada com 3 anos após dar a luz a 4 filhotes. Seu passatempo preferido é morder chinelo.",
       Raca: "chihuahua",
     },
     {
@@ -212,12 +217,11 @@ export default function Home() {
       nameDog: "Peter",
       sexoDog: "Macho",
       IdadeDog: "3 anos",
-      Descricao: "Peter tem 3 anos, é um cão medroso, foi encontrado em situações de maus tratos, depois que pega confiança fica brincalhão e vira um cão ótimo para fazer companhia para crianças, Possui todas suas vacinas em dia, não foi castrado. Seu brinquedo preferido é um brinquedo de dinossauro.",
+      Descricao:
+        "Peter tem 3 anos, é um cão medroso, foi encontrado em situações de maus tratos, depois que pega confiança fica brincalhão e vira um cão ótimo para fazer companhia para crianças, Possui todas suas vacinas em dia, não foi castrado. Seu brinquedo preferido é um brinquedo de dinossauro.",
       Raca: "Shih-tzu",
     },
   ];
-
-
 
   const [fontsLoaded] = useFonts({
     TitanOne: require("../assets/fonts/TitanOne-Regular.ttf"),
@@ -228,7 +232,6 @@ export default function Home() {
     return undefined;
   }
 
-
   return (
     <SafeAreaView style={styles.containerDois}>
       <FlatList
@@ -238,7 +241,6 @@ export default function Home() {
         keyExtractor={(item) => item.id}
         contentContainerStyle={styles.flatListContent}
       />
-
     </SafeAreaView>
   );
 }
