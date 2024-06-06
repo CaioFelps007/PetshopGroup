@@ -36,17 +36,27 @@ npm install -g nodemon
 
 **PAGES USADAS:**
 
-Cadastro 
-Contato 
-Denuncia 
-Home
-Login
-Pets
-Produtos
-Sobre
-Descrição dos pets
-Carrinho
-Pagamento
+Cadastro ;
+
+Contato ;
+
+Denuncia ;
+
+Home;
+
+Login;
+
+Pets;
+
+Produtos;
+
+Sobre;
+
+Descrição dos pets;
+
+Carrinho;
+
+Pagamento;
 
 ===================================================================================================================================
 **COMPONENTES USADAOS**
