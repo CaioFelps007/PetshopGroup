@@ -9,7 +9,7 @@ import { styles } from "../styles/StyleSheet";
 import Botao from "../components/ButtonComponents";
 import Textos from "../components/TextComponents";
 import { Image } from "react-native";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useFonts } from "expo-font";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
@@ -19,6 +19,17 @@ export default function Descricao({ route }) {
   const { item } = route.params;
   const navigation = useNavigation();
   const [selectedImg, setSelectedImg] = useState(item.urlImg);
+  const [aparecerView, setAparecerView] = useState(new Animated.Value(390));
+
+  useEffect(() => {
+    Animated.sequence([
+      Animated.timing(aparecerView, {
+        toValue: 0,
+        duration: 2000,
+        useNativeDriver: true,
+      }),
+    ]).start();
+  }, [aparecerView]);
 
   const [fontsLoaded] = useFonts({
     TitanOne: require("../assets/fonts/TitanOne-Regular.ttf"),
@@ -33,9 +44,11 @@ export default function Descricao({ route }) {
     <View style={{ flex: 1, backgroundColor: "#17395c" }}>
       <Image source={selectedImg} style={{ width: "100%", height: "50%" }} />
 
-      <View
+      <Animated.View
         style={{
-          flex: 1,
+          transform: [{ translateY: aparecerView }],
+          height: 390,
+          width: "100%",
           backgroundColor: "white",
           borderTopLeftRadius: 25,
           borderTopRightRadius: 25,
@@ -46,7 +59,7 @@ export default function Descricao({ route }) {
           style={{
             width: "100%",
             height: "15%",
-            backgroundColor: "pink",
+            backgroundColor: "white",
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "row",
@@ -84,7 +97,7 @@ export default function Descricao({ route }) {
           style={{
             width: "100%",
             height: "50%",
-            backgroundColor: "purple",
+            backgroundColor: "white",
             justifyContent: "center",
           }}
         >
@@ -104,7 +117,7 @@ export default function Descricao({ route }) {
           style={{
             width: "100%",
             height: "20%",
-            backgroundColor: "red",
+            backgroundColor: "white",
             padding: 5,
             flexDirection: "row",
           }}
@@ -177,7 +190,7 @@ export default function Descricao({ route }) {
           style={{
             width: "100%",
             height: "15%",
-            backgroundColor: "green",
+            backgroundColor: "white",
             alignItems: "center",
             justifyContent: "center",
           }}
@@ -204,7 +217,7 @@ export default function Descricao({ route }) {
             </Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </Animated.View>
     </View>
   );
 }

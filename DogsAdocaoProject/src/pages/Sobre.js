@@ -36,10 +36,10 @@ export default function Sobre() {
   async function readSobre() {
     try {
       const response = await axios.get(
-        "http://192.168.1.201:3000/api/readSobre"
+        "http://192.168.1.143:3000/api/readSobre"
       );
       setTextSobre(response.data);
-      console.log(response.data);
+      console.log(response.conteudo);
     } catch (error) {
       console.error("Erro ao buscar dados:", error);
     }
@@ -117,10 +117,9 @@ export default function Sobre() {
           }}
         >
           <ScrollView showsVerticalScrollIndicator={false}>
-          <Text>
+            <Text>
               {textSobre[0].conteudo ? textSobre[0].conteudo : "Carregando..."}
             </Text>
-            
           </ScrollView>
         </Animated.View>
       </View>

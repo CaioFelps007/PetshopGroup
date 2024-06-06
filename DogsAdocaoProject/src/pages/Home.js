@@ -184,6 +184,8 @@ export default function Home() {
     {
       id: "2",
       urlImg: require("../assets/images/pandora.png"),
+      urlImg1: require("../assets/images/pandora2.png"),
+      urlImg2: require("../assets/images/pandora3.png"),
       nameDog: "Pandora",
       sexoDog: "Femea",
       IdadeDog: "14 anos",
@@ -194,6 +196,8 @@ export default function Home() {
     {
       id: "3",
       urlImg: require("../assets/images/goti.png"),
+      urlImg1: require("../assets/images/goti2.png"),
+      urlImg2: require("../assets/images/goti3.png"),
       nameDog: "Goti",
       sexoDog: "Macho",
       IdadeDog: "12 meses",

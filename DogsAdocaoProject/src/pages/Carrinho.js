@@ -9,7 +9,7 @@ import {
   Dimensions,
   Animated,
   SafeAreaView,
-  Modal
+  Modal,
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Textos from "../components/TextComponents";
@@ -58,11 +58,7 @@ const AnimatedItem = ({ item }) => {
     setMostrarTouch(true);
   };
 
-
-
-
   return (
-
     <View
       style={{
         height: 120,
@@ -122,13 +118,14 @@ const AnimatedItem = ({ item }) => {
             <Text style={{ fontFamily: "TitanOne", fontSize: 19 }}>
               {item.Produto}
             </Text>
-            <Text style={{ fontFamily: "LoraItalic", color: 'green' }}>{item.preco}</Text>
+            <Text style={{ fontFamily: "LoraItalic", color: "green" }}>
+              {item.preco}
+            </Text>
           </View>
         </Animated.View>
       </TouchableOpacity>
       {mostrarTouch && (
         <>
-
           {/* botao de pagar */}
           <View style={{ flex: 1 }}>
             <TouchableOpacity
@@ -139,26 +136,29 @@ const AnimatedItem = ({ item }) => {
                   borderRadius: 20,
                 },
               ]}
-
             >
               <FontAwesome6 name="trash-alt" size={27} color="white" />
 
-              <Text ext style={{ color: "white", fontFamily: "TitanOne", marginTop: 10 }}>
+              <Text
+                ext
+                style={{
+                  color: "white",
+                  fontFamily: "TitanOne",
+                  marginTop: 10,
+                }}
+              >
                 Excluir
               </Text>
             </TouchableOpacity>
-
           </View>
         </>
       )}
-
-
-
     </View>
   );
 };
 // exportanto carrinho
 export default function Carrinho() {
+  const navigation = useNavigation();
 
   const [visible, setVisible] = useState(false);
 
@@ -181,22 +181,20 @@ export default function Carrinho() {
     {
       id: "2",
       urlImg: require("../assets/images/pedigreePreto.png"),
-      Produto: "Corda Pedigree Adultos 1,1kg!",
+      Produto: "Pedigree Adultos 1,1kg!",
       preco: "109.90",
     },
     {
       id: "3",
       urlImg: require("../assets/images/bolaamericana.png"),
-      Produto: "Corda Pedigree Adultos 1,1kg!",
-      preco: "109.90",
-
+      Produto: "Bola de futebol Americano!",
+      preco: "49.90",
     },
     {
       id: "4",
       urlImg: require("../assets/images/ossolaranja.png"),
-      Produto: "Corda Pedigree Adultos 1,1kg!",
-      preco: "109.90",
-
+      Produto: "Osso Laranja!",
+      preco: "14.90",
     },
   ];
   //  const para criar as fontes
@@ -210,119 +208,151 @@ export default function Carrinho() {
     return undefined;
   }
 
-  const navigation = useNavigation();
-
   return (
-
     <SafeAreaView>
-
       <Modal transparent={false} animationType="slide" visible={visible}>
-
-        <View style={{ height: 60, backgroundColor: '#17395C', paddingLeft: 20, flexDirection: 'row', gap: 50, paddingTop: 20 }}>
-
-          <TouchableOpacity
-
-            onPress={() => visModal(false)}
-          >
+        <View
+          style={{
+            height: 60,
+            backgroundColor: "#17395C",
+            paddingLeft: 20,
+            flexDirection: "row",
+            gap: 50,
+            paddingTop: 20,
+          }}
+        >
+          <TouchableOpacity onPress={() => visModal(false)}>
             <AntDesign name="arrowleft" size={24} color="white" />
-
           </TouchableOpacity>
 
-          <Text style={{ fontFamily: 'TitanOne', fontSize: 20, color: 'white' }}>PÁGINA PAGAMENTO</Text>
-
+          <Text
+            style={{ fontFamily: "TitanOne", fontSize: 20, color: "white" }}
+          >
+            PÁGINA PAGAMENTO
+          </Text>
         </View>
 
-
         {/* VIEW PARA COLOCAR OS BANCOS */}
-        <View style={{ height: 600, backgroundColor: 'white', borderTopRightRadius: 50, borderTopLeftRadius: 50, padding: 30, alignItems: 'center' }}>
+        <View
+          style={{
+            height: 600,
+            backgroundColor: "white",
+            borderTopRightRadius: 50,
+            borderTopLeftRadius: 50,
+            padding: 30,
+            alignItems: "center",
+          }}
+        >
+          <Text style={{ fontFamily: "TitanOne", fontSize: 17, marginTop: 10 }}>
+            PROSSEGUIR PARA O PAGAMENTO...
+          </Text>
+          <Text
+            style={{
+              fontFamily: "FjallaOne",
+              fontSize: 17,
+              marginTop: 10,
+              color: "burlywood",
+              left: -40,
+            }}
+          >
+            Escolha sua forma de pagamento...
+          </Text>
 
-
-          <Text style={{ fontFamily: 'TitanOne', fontSize: 17, marginTop: 10 }}>PROSSEGUIR PARA O PAGAMENTO...</Text>
-          <Text style={{ fontFamily: 'FjallaOne', fontSize: 17, marginTop: 10, color: 'burlywood', left: -40 }}>Escolha sua forma de pagamento...</Text>
-
-
-          <TouchableOpacity style={{
-            height: 70,
-            width: 320,
-            shadowOffset: { width: 0, height: 5 },
-            shadowColor: "black",
-            shadowRadius: 5,
-            shadowOpacity: 0.5,
-            elevation: 10,
-            backgroundColor: 'white',
-            marginTop: 30,
-            flexDirection: 'row',
-            alignItems: 'center',
-            paddingLeft: 20,
-            borderRadius: 15,
-            gap: 20
-          }}>
-
-            <Image style={{ height: 70, width: 70 }} source={require('../assets/images/nubank.png')} />
-            <Text style={{ fontFamily: 'TitanOne', color: 'blueviolet', fontSize: 17 }}>
+          <TouchableOpacity
+            style={{
+              height: 70,
+              width: 320,
+              shadowOffset: { width: 0, height: 5 },
+              shadowColor: "black",
+              shadowRadius: 5,
+              shadowOpacity: 0.5,
+              elevation: 10,
+              backgroundColor: "white",
+              marginTop: 30,
+              flexDirection: "row",
+              alignItems: "center",
+              paddingLeft: 20,
+              borderRadius: 15,
+              gap: 20,
+            }}
+          >
+            <Image
+              style={{ height: 70, width: 70 }}
+              source={require("../assets/images/nubank.png")}
+            />
+            <Text
+              style={{
+                fontFamily: "TitanOne",
+                color: "blueviolet",
+                fontSize: 17,
+              }}
+            >
               Banco Nubank
             </Text>
-
-
           </TouchableOpacity>
 
-
           {/* BANCO SANTANDER */}
-          <TouchableOpacity style={{
-            height: 70,
-            width: 320,
-            shadowOffset: { width: 0, height: 5 },
-            shadowColor: "black",
-            shadowRadius: 5,
-            shadowOpacity: 0.5,
-            elevation: 10,
-            backgroundColor: 'white',
-            marginTop: 30,
-            flexDirection: 'row',
-            alignItems: 'center',
-            paddingLeft: 20,
-            borderRadius: 15,
-            gap: 20
-          }}>
-
-            <Image style={{ height: 70, width: 70 }} source={require('../assets/images/santander.png')} />
-            <Text style={{ fontFamily: 'TitanOne', color: 'red', fontSize: 17 }}>
+          <TouchableOpacity
+            style={{
+              height: 70,
+              width: 320,
+              shadowOffset: { width: 0, height: 5 },
+              shadowColor: "black",
+              shadowRadius: 5,
+              shadowOpacity: 0.5,
+              elevation: 10,
+              backgroundColor: "white",
+              marginTop: 30,
+              flexDirection: "row",
+              alignItems: "center",
+              paddingLeft: 20,
+              borderRadius: 15,
+              gap: 20,
+            }}
+          >
+            <Image
+              style={{ height: 70, width: 70 }}
+              source={require("../assets/images/santander.png")}
+            />
+            <Text
+              style={{ fontFamily: "TitanOne", color: "red", fontSize: 17 }}
+            >
               Banco Santander
             </Text>
-
-
           </TouchableOpacity>
 
           {/* PAGAR NO PIX */}
-          <TouchableOpacity style={{
-            height: 70,
-            width: 320,
-            shadowOffset: { width: 0, height: 5 },
-            shadowColor: "black",
-            shadowRadius: 5,
-            shadowOpacity: 0.5,
-            elevation: 10,
-            backgroundColor: 'white',
-            marginTop: 30,
-            flexDirection: 'row',
-            alignItems: 'center',
-            paddingLeft: 20,
-            borderRadius: 15,
-            gap: 30
-          }}>
+          <TouchableOpacity
+            style={{
+              height: 70,
+              width: 320,
+              shadowOffset: { width: 0, height: 5 },
+              shadowColor: "black",
+              shadowRadius: 5,
+              shadowOpacity: 0.5,
+              elevation: 10,
+              backgroundColor: "white",
+              marginTop: 30,
+              flexDirection: "row",
+              alignItems: "center",
+              paddingLeft: 20,
+              borderRadius: 15,
+              gap: 30,
+            }}
+          >
+            <Image
+              style={{ height: 60, width: 60 }}
+              source={require("../assets/images/pixLogo.png")}
+            />
 
-            <Image style={{ height: 60, width: 60 }} source={require('../assets/images/pixLogo.png')} />
-
-            <Text style={{ fontFamily: 'TitanOne', color: 'silver', fontSize: 17 }}>
+            <Text
+              style={{ fontFamily: "TitanOne", color: "silver", fontSize: 17 }}
+            >
               Pagar no Pix
             </Text>
-
           </TouchableOpacity>
-
         </View>
-
       </Modal>
-
 
       <View
         style={[styles.bodyHome, { backgroundColor: "white", height: 800 }]}
@@ -334,29 +364,45 @@ export default function Carrinho() {
           keyExtractor={(item) => item.id}
           contentContainerStyle={styles.flatListContent}
         />
-        <View style={{
-          height: 100, width: '100%', backgroundColor: '#17395C', justifyContent: 'flex-end', alignItems: 'center', flexDirection: 'row', gap: 12
-
-        }}>
-
-
-          <Text style={{ fontSize: 16, fontFamily: 'TitanOne', top: -10, color: 'white', }}>
+        <View
+          style={{
+            height: 100,
+            width: "100%",
+            backgroundColor: "#17395C",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            flexDirection: "row",
+            gap: 12,
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 16,
+              fontFamily: "TitanOne",
+              top: -10,
+              color: "white",
+            }}
+          >
             Valor: R$200,09
           </Text>
-          < TouchableOpacity style={[styles.ButtonFooter, { backgroundColor: 'green' }]}
-            onPress={() => visModal(true)}>
-            <Text style={{ fontFamily: 'TitanOne', color: 'white' }}>
+          <TouchableOpacity
+            style={[styles.ButtonFooter, { backgroundColor: "green" }]}
+            onPress={() => visModal(true)}
+          >
+            <Text style={{ fontFamily: "TitanOne", color: "white" }}>
               Concluir Compra
             </Text>
           </TouchableOpacity>
-          < TouchableOpacity style={styles.ButtonFooter}
-            onPress={() => navigation.navigate("Home")}>
-            <Text style={{ fontFamily: 'TitanOne', color: 'white' }}>
+          <TouchableOpacity
+            style={styles.ButtonFooter}
+            onPress={() => navigation.navigate("Brinquedos")}
+          >
+            <Text style={{ fontFamily: "TitanOne", color: "white" }}>
               Voltar as Compras
             </Text>
           </TouchableOpacity>
         </View>
-      </View >
-    </SafeAreaView >
+      </View>
+    </SafeAreaView>
   );
 }
