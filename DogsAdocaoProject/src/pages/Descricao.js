@@ -22,12 +22,12 @@ import React, { useState, useEffect } from "react";
 //importação das fontes
 import { useFonts } from "expo-font";
 
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native"; //importação do useNavigation para navegação
 
-import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons"; //importação de icones
 
 export default function Descricao({ route }) {
-  const { item } = route.params;
+  const { item } = route.params;  // importação da 
   const navigation = useNavigation();
   const [selectedImg, setSelectedImg] = useState(item.urlImg);
 
