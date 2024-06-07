@@ -25,7 +25,7 @@ export default function Sobre() {
   const readSobre = async () => {
     try {
       const response = await axios.get(
-        "http://10.144.170.75:3000/api/readSobre"
+        "http://10.0.2.15:3000/api/readSobre"
       );
       console.log(response.data[0].conteudo);
       setTextSobre(response.data[0].conteudo);

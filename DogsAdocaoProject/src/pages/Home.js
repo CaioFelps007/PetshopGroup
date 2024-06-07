@@ -44,7 +44,7 @@ const AnimatedItem = ({ item }) => {
   Animated.sequence([
     Animated.timing(aparecendo, {
       toValue: 369,
-      duration: 1500,
+      duration: 1000,
       useNativeDriver: false,
     }),
   ]).start();
@@ -56,15 +56,8 @@ const AnimatedItem = ({ item }) => {
 
   const navigation = useNavigation();
 
-  const [visible, setVisible] = useState(false);
 
-  visModal = (vis) => {
-    if (!visible) {
-      setVisible(vis);
-    } else {
-      setVisible(vis);
-    }
-  };
+
 
   return (
     <View
