@@ -193,33 +193,34 @@ export const styles = StyleSheet.create({
 
   HeaderUser: {
     width: "100%",
-    alignItems: "flex-start",
-    justifyContent: "center",
+    alignItems: "center",
+    justifyContent: "flex-start",
     height: 200,
     padding: 25,
+    flexDirection: "row",
+    gap: 10,
   },
 
   hduser: {
     fontSize: 17,
-    marginTop: 20,
   },
 
   btnsHomePage: {
     shadowOffset: { width: 0, height: 5 },
-    shadowColor: "black",
+    shadowColor: "blue",
     shadowRadius: 5,
     shadowOpacity: 5,
-    elevation: 9,
+    elevation: 10,
     width: 110,
     height: 39,
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 17,
+    borderRadius: 13,
   },
 
   activeButtonText: {
-    color: "#17395C",
+    color: "black",
   },
 
   flatListContent: {
@@ -240,7 +241,6 @@ export const styles = StyleSheet.create({
     height: 650,
     justifyContent: "center",
     alignItems: "center",
-
   },
 
   //sobre
@@ -352,11 +352,12 @@ export const styles = StyleSheet.create({
     shadowRadius: 5,
     shadowOpacity: 0.5,
     elevation: 5,
-    backgroundColor: '#EFB758',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#EFB758",
+    alignItems: "center",
+    justifyContent: "center",
     width: 100,
     height: 50,
-    marginBottom: 20, right: 5
+    marginBottom: 20,
+    right: 5,
   },
 });

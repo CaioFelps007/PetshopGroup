@@ -1,24 +1,36 @@
+// importação dos itens necessários para o código
 import {
   View,
   SafeAreaView,
   Text,
   Animated,
   ImageBackground,
+  Image,
+  TouchableOpacity,
 } from "react-native";
+
+//importação do sty
 import { styles } from "../styles/StyleSheet";
+
+//importação das pagina de components
 import Botao from "../components/ButtonComponents";
 import Textos from "../components/TextComponents";
-import { Image } from "react-native";
+
+// importação de itens necessários para declarar o estado e efeitos da página
 import React, { useState, useEffect } from "react";
+
+//importação das fontes
 import { useFonts } from "expo-font";
-import { TouchableOpacity } from "react-native";
+
 import { useNavigation } from "@react-navigation/native";
+
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Descricao({ route }) {
   const { item } = route.params;
   const navigation = useNavigation();
   const [selectedImg, setSelectedImg] = useState(item.urlImg);
+
   const [aparecerView, setAparecerView] = useState(new Animated.Value(390));
 
   useEffect(() => {
@@ -47,7 +59,7 @@ export default function Descricao({ route }) {
       <Animated.View
         style={{
           transform: [{ translateY: aparecerView }],
-          height: 390,
+          height: "50%",
           width: "100%",
           backgroundColor: "white",
           borderTopLeftRadius: 25,

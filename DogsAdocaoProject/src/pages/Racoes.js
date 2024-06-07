@@ -62,7 +62,7 @@ const AnimatedItem = ({ item }) => {
         marginBottom: 10,
         marginTop: 20,
 
-        shadowColor: "#000",
+        shadowColor: "black",
         shadowOffset: {
           width: 0,
           height: 6,
@@ -189,7 +189,7 @@ export default function Racoes() {
 
   return (
     <SafeAreaView>
-      <View style={[styles.bodyHome, { backgroundColor: 'white' }]}>
+      <View style={[styles.bodyHome, { backgroundColor: "white" }]}>
         <FlatList
           ListHeaderComponent={HeaderHome}
           data={data}

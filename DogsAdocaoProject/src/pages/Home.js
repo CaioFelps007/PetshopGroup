@@ -75,7 +75,7 @@ const AnimatedItem = ({ item }) => {
         marginBottom: 10,
         marginTop: 20,
 
-        shadowColor: "#000",
+        shadowColor: "black",
         shadowOffset: {
           width: 0,
           height: 6,
@@ -171,9 +171,9 @@ export default function Home() {
   const data = [
     {
       id: "1",
-      urlImg: require("../assets/images/scooby.png"),
-      urlImg1: require("../assets/images/pandora.png"),
-      urlImg2: require("../assets/images/goti.png"),
+      urlImg: require("../assets/images/viraLata.png"),
+      urlImg1: require("../assets/images/viraLata2.png"),
+      urlImg2: require("../assets/images/viraLata3.png"),
       nameDog: "Scooby",
       sexoDog: "Macho",
       IdadeDog: "4 meses",
@@ -207,17 +207,21 @@ export default function Home() {
     },
     {
       id: "4",
-      urlImg: require("../assets/images/aikha.png"),
+      urlImg: require("../assets/images/yorkshire2.png"),
+      urlImg1: require("../assets/images/Yorkshire.png"),
+      urlImg2: require("../assets/images/Yorkshire3.png"),
       nameDog: "Aikha",
       sexoDog: "Femea",
       IdadeDog: "4 anos",
       Descricao:
         "Aikha tem 4 anos, possui uma personalidade forte, bricalhona, ótima para fazer companhia, Possui todas suas vacinas em dia, foi castrada com 3 anos após dar a luz a 4 filhotes. Seu passatempo preferido é morder chinelo.",
-      Raca: "chihuahua",
+      Raca: "Yorkshire",
     },
     {
       id: "5",
       urlImg: require("../assets/images/peter.png"),
+      urlImg1: require("../assets/images/peter2.png"),
+      urlImg2: require("../assets/images/peter3.png"),
       nameDog: "Peter",
       sexoDog: "Macho",
       IdadeDog: "3 anos",

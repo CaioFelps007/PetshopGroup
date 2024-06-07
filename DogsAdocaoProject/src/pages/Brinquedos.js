@@ -82,7 +82,7 @@ const AnimatedItem = ({ item }) => {
         marginBottom: 10,
         marginTop: 20,
 
-        shadowColor: "#000",
+        shadowColor: "black",
         shadowOffset: {
           width: 0,
           height: 6,

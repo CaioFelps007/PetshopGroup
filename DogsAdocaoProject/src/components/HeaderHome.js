@@ -5,7 +5,8 @@ import Botao from "./ButtonComponents";
 import Textos from "./TextComponents";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
+
+import { FontAwesome } from "@expo/vector-icons";
 
 export default function HeaderHome() {
   const navigation = useNavigation();
@@ -19,6 +20,7 @@ export default function HeaderHome() {
   return (
     <SafeAreaView>
       <View style={styles.HeaderUser}>
+        <FontAwesome name="user-circle-o" size={47} color={"black"} />
         <Textos
           title={"Olá Usuario"}
           estilotexto={[styles.hduser, { fontFamily: "TitanOne" }]}
