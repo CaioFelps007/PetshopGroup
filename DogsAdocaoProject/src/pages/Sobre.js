@@ -1,18 +1,11 @@
-import { styles } from "../styles/StyleSheet";
 import {
   Text,
   View,
-  Image,
-  SafeAreaView,
-  TouchableOpacity,
   ImageBackground,
   ScrollView,
   Animated,
-  Modal,
-  Dimensions,
 } from "react-native";
 
-import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 
 import { useEffect, useState } from "react";
@@ -20,30 +13,26 @@ import { useFonts } from "expo-font";
 import { useIsFocused } from "@react-navigation/native";
 
 export default function Sobre() {
-  const navigation = useNavigation();
-  const [textSobre, setTextSobre] = useState({});
+  const [textSobre, setTextSobre] = useState([]);
   const isFocused = useIsFocused();
-  const screenHeight = Dimensions.get("window").height;
-  const aparecendo = new Animated.Value(0);
 
   useEffect(() => {
-    alert("ESTOUAQUI!");
     if (isFocused) {
       readSobre();
     }
   }, [isFocused]);
 
-  async function readSobre() {
+  const readSobre = async () => {
     try {
       const response = await axios.get(
-        "http://192.168.1.143:3000/api/readSobre"
+        "http://10.144.170.75:3000/api/readSobre"
       );
-      setTextSobre(response.data);
-      console.log(response.conteudo);
-    } catch (error) {
-      console.error("Erro ao buscar dados:", error);
+      console.log(response.data[0].conteudo);
+      setTextSobre(response.data[0].conteudo);
+    } catch (err) {
+      console.log("Não foi possível buscar os dados da página Sobre");
     }
-  }
+  };
 
   const [fontsLoaded] = useFonts({
     TitanOne: require("../assets/fonts/TitanOne-Regular.ttf"),
@@ -54,6 +43,7 @@ export default function Sobre() {
   if (!fontsLoaded) {
     return undefined;
   }
+
   return (
     <View style={{ flex: 1, backgroundColor: "red" }}>
       <View style={{ flex: 1, backgroundColor: "pink" }}>
@@ -117,9 +107,11 @@ export default function Sobre() {
           }}
         >
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text>
-              {textSobre[0].conteudo ? textSobre[0].conteudo : "Carregando..."}
-            </Text>
+            {textSobre.length > 0 ? (
+              <Text>{textSobre}</Text>
+            ) : (
+              <Text>Carregando...</Text>
+            )}
           </ScrollView>
         </Animated.View>
       </View>
