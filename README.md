@@ -1,4 +1,3 @@
-LIVE SHARE : https://prod.liveshare.vsengsaas.visualstudio.com/join?ED54D8BD4F63AAD4BCCF513BBFB1A114D44A
 
 **PROJETO PET LOVE**
 
